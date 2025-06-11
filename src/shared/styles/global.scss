@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+    letter-spacing: -5px;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 30px;
+ @media (max-width: 576px) {
+    padding: 0 15px;
+  }
+
+
+
+}
+
+
+
+:root {
+    --color-primary: #BB4642;
+    --color-accent: #A22976;
+    --color-black: #1C1C1C;
+    --color-black-2: #333230;
+    --color-white: #FFFFFF;
+    --color-gray-light: #F5F5F7;
+    --color-gray-text: #A0A0A0;
+    --main-gradient: linear-gradient(92.6deg, var(--color-primary) 5.26%, var(--color-accent) 88.96%);
+}
