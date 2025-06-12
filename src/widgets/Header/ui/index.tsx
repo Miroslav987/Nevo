@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { Drawer, Typography } from 'antd';
 import { useState, useCallback } from 'react';
@@ -18,7 +18,7 @@ const { Text } = Typography;
 
 const Header = () => {
     const [isDrawer, setDrawer] = useState(false);
-    
+
     const router = useRouter();
 
     const handleNav = useCallback((path: string) => {
