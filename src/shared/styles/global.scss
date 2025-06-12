@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Intern';
+  src: url('../fonts/Inter.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif !important;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+    letter-spacing: -5px;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 30px;
+ @media (max-width: 576px) {
+    padding: 0 15px;
+  }
+
+
+
+}
+
+
+
+:root {
+  --color-background-primary: #FFFFFF;
+  --color-background-secondary: #F5F5F5;
+  --color-text-primary: #101010;
+  --color-text-secondary: #BABABA;
+  --color-accent-start: #BB4642;
+  --color-accent-end: #A22976;
+  --color-gradient-accent: linear-gradient(90deg, #BB4642 0%, #A22976 89%);
+}
