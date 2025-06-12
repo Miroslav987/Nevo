@@ -1,53 +1,69 @@
- .navButton {
-     display: flex;
-     gap: 5px;
-     height: 54px;
-     background: var(--color-white);
+.navButton {
+    overflow: hidden;
+    display: flex;
+    gap: 0px;
+    width: 54px;
+    height: 54px;
+    background: var(--color-background-primary);
+    transition:  background 0.6s ease, width 0.5s ease;
 
-     span {
-         display: none;
-         font-weight: 500;
-     }
+    span {
+        width: 0;
+        opacity: 0;
+        transition: 
+        width 0.3s ease, 
+        opacity 0.3s ease 0.1s;
+        font-weight: 500;
+    }
 
-     img {
-         width: 24px;
-         height: 24px;
-     }
+    img {
+        width: 24px;
+        height: 24px;
+        transition: filter 0.6s ease;
+    }
 
-     @media (max-width: 576px) {
+    @media (max-width: 576px) {
+        gap: 5px;
         width: 100%;
-        height: 54;
+        height: 54px;
         font-size: 16px;
-        color: var(--color-white);
-        background: var(--color-black-2);
+        color: var(--color-background-primary);
+        background: var(--color-text-primary);
 
         img {
             filter: grayscale(100%) brightness(0%) invert(1);
         }
-        
-         span {
-             display: block;
-         }
 
-     }
- }
+        span {
+            opacity: 1;
+            color: var(--color-background-primary);
+            width: auto;
+            display: block;
+        }
 
- .active {
-     background: var(--color-black-2);
-     padding: 15px 20px;
-     width: 100%;
+    }
+}
 
-     span {
-         display: flex;
-         color: var(--color-white);
-     }
+.active {
+    gap: 5px;
+    background: var(--color-text-primary);
+    padding: 15px 20px;
+    width: auto;
+    transition:  background 1s ease, padding 0.3s ease;
 
-     img {
-         filter: grayscale(100%) brightness(0%) invert(1);
-     }
+    span {
+        width: 100% ;
+        opacity: 1 ;
+        transition: 0.2s;
+        color: var(--color-background-primary);
+    }
 
-     &:hover {
-         background: var(--color-black-2) !important;
-     }
+    img {
+        filter: grayscale(100%) brightness(0%) invert(1);
+    }
 
- }
+    &:hover {
+        background: var(--color-text-primary) !important;
+    }
+
+}

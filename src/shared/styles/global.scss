@@ -54,12 +54,11 @@ p {
 
 
 :root {
-    --color-primary: #BB4642;
-    --color-accent: #A22976;
-    --color-black: #1C1C1C;
-    --color-black-2: #333230;
-    --color-white: #FFFFFF;
-    --color-gray-light: #F5F5F7;
-    --color-gray-text: #A0A0A0;
-    --main-gradient: linear-gradient(92.6deg, var(--color-primary) 5.26%, var(--color-accent) 88.96%);
+  --color-background-primary: #FFFFFF;
+  --color-background-secondary: #F5F5F5;
+  --color-text-primary: #101010;
+  --color-text-secondary: #BABABA;
+  --color-accent-start: #BB4642;
+  --color-accent-end: #A22976;
+  --color-gradient-accent: linear-gradient(90deg, #BB4642 0%, #A22976 89%);
 }
