@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { Drawer, Typography } from 'antd';
 import { useState, useCallback } from 'react';
 
-import logo from '@shared/icons/logo.svg';
 import burgerMenu from '@shared/icons/burger_menu.svg';
 
 import AppButton from '@shared/ui/Button';
@@ -13,6 +12,7 @@ import NavButton from '@entities/header/components/NavButton';
 
 import styles from './styles.module.scss';
 import { itemNav } from '../module/nav.mock';
+import AppLogo from '@shared/ui/AppLogo';
 
 const { Text } = Typography;
 
@@ -33,9 +33,8 @@ const Header = () => {
     return (
         <header className={`container ${styles.header}`}>
             <nav>
-                <div className={styles.logo}>
-                    <Image src={logo} alt="Логотип" priority />
-                </div>
+
+                <AppLogo/>
 
                 <div className={styles.navBtns}>
                     {itemNav.map((item) => (
