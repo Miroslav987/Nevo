@@ -1,0 +1,9 @@
+ .dekstopNav {
+     display: flex;
+     gap: 15px;
+
+     @media (max-width: 576px) {
+         display: none;
+     }
+
+ }
