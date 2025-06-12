@@ -1,19 +1,19 @@
 'use client';
 
 import NavButton from '@entities/header/components/NavButton';
-import styles from './DekstopNav.module.scss';
+import styles from './NavButtons.module.scss';
 // import { useRouter } from 'next/navigation';
 import { itemNav } from '@entities/header/model/nav.mock';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
-export const DesktopNav = () => {
+export const NavButtons = () => {
 //   const router = useRouter();
     const [isActive, useIsActive] = useState('/')// временно
 
-  const handleNav = (path: string) => {
+  const handleNav = useCallback( (path: string) => {
     useIsActive(path)
     // router.push(path);
-  };
+  },[isActive ,{/*router, close*/}]);
 
   return (
     <div className={styles.dekstopNav}>

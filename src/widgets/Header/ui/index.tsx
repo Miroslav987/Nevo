@@ -2,9 +2,9 @@
 
 import styles from './styles.module.scss';
 import AppLogo from '@shared/ui/AppLogo';
-import { DesktopNav } from '@entities/header/ui/DekstopNav';
 import { BurgerButton } from '@entities/header/ui/BurgerButton';
 import { MobileNavDrawer } from '@entities/header/ui/MobileNavDrawer';
+import { NavButtons } from '@entities/header/ui/NavButtons';
 
 
 
@@ -13,7 +13,9 @@ const Header = () => {
         <header className={`container ${styles.header}`}>
             <nav>
                 <AppLogo/>
-                <DesktopNav/>
+                <div className={styles.dekstopNav}>
+                <NavButtons/>
+                </div>
                 <BurgerButton/>
                 <MobileNavDrawer/>
             </nav>
