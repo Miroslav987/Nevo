@@ -1,9 +1,14 @@
- .dekstopNav {
-     display: flex;
-     gap: 15px;
+ .navButtons {
+   display: flex;
+   gap: 15px;
 
-     @media (max-width: 576px) {
-       flex-direction: column;
-     }
+   @media (max-width: 576px) {
+     display: none;
+   }
 
+ }
+
+ .navButtonsMob {
+   display: flex;
+   flex-direction: column
  }

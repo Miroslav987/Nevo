@@ -23,7 +23,7 @@ export const MobileNavDrawer = () => {
             mask={false}
             closable={false}
         >
-            <NavButtons />
+            <NavButtons isMob={true}/>
         </Drawer>
     );
 };

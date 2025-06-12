@@ -6,7 +6,11 @@ import styles from './NavButtons.module.scss';
 import { itemNav } from '@entities/header/model/nav.mock';
 import { useCallback, useState } from 'react';
 
-export const NavButtons = () => {
+type NavButtonsProps = {
+  isMob?: boolean
+}
+
+export const NavButtons = ({isMob}:NavButtonsProps) => {
 //   const router = useRouter();
     const [isActive, useIsActive] = useState('/')// временно
 
@@ -16,7 +20,7 @@ export const NavButtons = () => {
   },[isActive ,{/*router, close*/}]);
 
   return (
-    <div className={styles.dekstopNav}>
+    <div  className={`${styles.navButtons} ${isMob? styles.navButtonsMob: ""} `}>
       {itemNav.map((item, i) => (
         <NavButton key={i} item={item} isActive={isActive} handleNav={handleNav} />
       ))}

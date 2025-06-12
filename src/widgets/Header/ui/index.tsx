@@ -13,9 +13,7 @@ const Header = () => {
         <header className={`container ${styles.header}`}>
             <nav>
                 <AppLogo/>
-                <div className={styles.dekstopNav}>
                 <NavButtons/>
-                </div>
                 <BurgerButton/>
                 <MobileNavDrawer/>
             </nav>
