@@ -1,104 +1,87 @@
-'use client'
+'use client';
+
 import { usePathname, useRouter } from 'next/navigation';
-import logo from '@shared/icons/logo.svg'
-import main from '@shared/icons/main.svg'
-import aboutUs from '@shared/icons/about_us.svg'
-import aboutProject from '@shared/icons/about_project.svg'
-import burgerMenu from '@shared/icons/burger_menu.svg'
-import Image, { StaticImageData } from 'next/image';
-import { Drawer } from 'antd';
-import styles from "./styles.module.scss"
-import { Typography } from 'antd';
+import Image from 'next/image';
+import { Drawer, Typography } from 'antd';
+import { useState, useCallback } from 'react';
+
+import logo from '@shared/icons/logo.svg';
+import burgerMenu from '@shared/icons/burger_menu.svg';
+
 import AppButton from '@shared/ui/Button';
-import { useState } from 'react';
+import NavButton from '@entities/header/components/NavButton';
 
-const { Title, Text } = Typography;
+import styles from './styles.module.scss';
+import { itemNav } from '../module/nav.mock';
 
-interface ItemNav {
-    icon: StaticImageData,
-    path: string
-    title: string
-}
+const { Text } = Typography;
 
-const itemNav: ItemNav[] = [
-    {
-        icon: main,
-        path: "/",
-        title: "Главная"
-    },
-    {
-        icon: aboutUs,
-        path: "/about/us",
-        title: "О нас"
-    },
-    {
-        icon: aboutProject,
-        path: "/about/project",
-        title: "Наши проекты"
-    }
-]
 const Header = () => {
-    const [open, setOpen] = useState(false);
-    const location = usePathname()
-    const router = useRouter()
+    const [isDrawer, setDrawer] = useState(false);
+    
+    const router = useRouter();
 
-    function handleNav(path: string) {
-        router.push(path)
-        handleBurgerMenu()
-    }
-    function handleBurgerMenu() {
-        setOpen(prev => prev ? false : true)
-    }
+    const handleNav = useCallback((path: string) => {
+        router.push(path);
+        setDrawer(false);
+    }, [router]);
+
+    const toggleDrawer = useCallback(() => {
+        setDrawer((prev) => !prev);
+    }, []);
+
     return (
         <header className={`container ${styles.header}`}>
             <nav>
                 <div className={styles.logo}>
-                    <Image src={logo} alt='logo' />
+                    <Image src={logo} alt="Логотип" priority />
                 </div>
-                <div className={styles.btns}>
-                    {itemNav.map((e: ItemNav, i: number) => (
-                        <AppButton
-                            key={i}
-                            onClick={() => handleNav(e.path)}
-                            className={e.path == location ? styles.active : ""}
-                        >
-                            <Image src={e.icon} alt={`${e.icon}`} />  <Text>{e.title}</Text>
-                        </AppButton>
+
+                <div className={styles.navBtns}>
+                    {itemNav.map((item) => (
+                        <NavButton key={item.path} item={item} handleNav={handleNav} />
                     ))}
                 </div>
-                <AppButton onClick={handleBurgerMenu} className={styles.burgerMenu}><Image src={burgerMenu} alt='burger menu' /></AppButton>
+
+                <AppButton
+                    onClick={toggleDrawer}
+                    className={styles.burgerMenu}
+                    aria-label="Меню навигации"
+                >
+                    <Image src={burgerMenu} alt="Открыть меню" />
+                </AppButton>
+
                 <Drawer
                     placement="top"
-                    onClose={() => setOpen(false)}
-                    open={open}
+                    onClose={() => setDrawer(false)}
+                    open={isDrawer}
+                    closable={false}
+                    mask={false}
                     rootStyle={{
                         top: 125,
-                        height:240,
+                        height: 240,
                         borderRadius: 30,
                         overflow: 'hidden',
-                        margin: "0 15px",
+                        margin: '0 15px',
                     }}
                     bodyStyle={{
                         borderRadius: 30,
                         overflow: 'hidden',
                         height: '100%',
                     }}
-                    mask={false}
-                    closable={false}
-
                 >
-                     <div className={styles.btnsMob}>
-                        {itemNav.map((e: ItemNav, i: number) => (
+                    <div className={styles.navMobBtns}>
+                        {itemNav.map((item) => (
                             <AppButton
-                                key={i}
-                                className={styles.btns}
-                                onClick={() => handleNav(e.path)}
+                                key={item.path}
+                                onClick={() => handleNav(item.path)}
                             >
-                                <Image src={e.icon} alt={`${e.icon}`} />  <Text>{e.title}</Text>
+                                <Image src={item.icon} alt={item.title} />
+                                <Text>{item.title}</Text>
                             </AppButton>
                         ))}
                     </div>
-                 </Drawer>
+                </Drawer>
             </nav>
         </header>
     );

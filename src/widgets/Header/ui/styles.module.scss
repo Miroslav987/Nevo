@@ -41,44 +41,12 @@
             }
         }
 
-        .btns {
+        .navBtns {
             display: flex;
             gap: 15px;
 
             @media (max-width: 576px) {
                 display: none;
-            }
-
-            button {
-                display: flex;
-                height: 54px;
-                background: var(--color-white);
-
-                span {
-                    display: none;
-                    font-weight: 500;
-                }
-
-                img {
-                    width: 24px;
-                    height: 24px;
-                }
-            }
-
-            .active {
-                background: var(--color-black-2);
-                padding: 15px 20px;
-                width: 100%;
-
-                span {
-                    display: flex;
-                    color: var(--color-white);
-
-                }
-
-                img {
-                    filter: grayscale(100%) brightness(0%) invert(1);
-                }
             }
 
         }
@@ -104,7 +72,7 @@
 
 }
 
-.btnsMob {
+.navMobBtns {
     display: flex;
     flex-direction: column;
     gap: 15px;
