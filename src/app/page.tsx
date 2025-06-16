@@ -1,8 +1,10 @@
+import Main from "view/main";
 
 
 export default function Home() {
   return (
-    <div >
-    </div>
+    <>
+    <Main/>
+    </>
   );
 }

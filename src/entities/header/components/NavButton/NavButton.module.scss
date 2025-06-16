@@ -31,7 +31,7 @@
         background: var(--color-text-primary);
 
         img {
-            filter: grayscale(100%) brightness(0%) invert(1);
+            filter: var(--color-white-fill);
         }
 
         span {
@@ -46,6 +46,7 @@
 
 .active {
     gap: 5px;
+    color: var(--color-background-primary);
     background: var(--color-text-primary);
     padding: 15px 20px;
     width: auto;
@@ -55,15 +56,16 @@
         width: 100% ;
         opacity: 1 ;
         transition: 0.2s;
-        color: var(--color-background-primary);
     }
 
     img {
-        filter: grayscale(100%) brightness(0%) invert(1);
+        filter: var(--color-white-fill);
     }
 
     &:hover {
+        color: var(--color-background-primary) !important;
         background: var(--color-text-primary) !important;
+
     }
 
 }
