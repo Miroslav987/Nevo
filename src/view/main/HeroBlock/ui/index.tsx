@@ -1,36 +1,34 @@
 import React from 'react';
 import styles from './HeroBlock.module.scss'
 import AppButton from '@shared/ui/Button';
-import Image from 'next/image';
 import arrow from '@shared/icons/arrow.svg'
-import figure from '@shared/icons/figure_one.svg'
-import laptop_elite from '@shared/imgs/laptop_elite.webp'
-import laptop_baytash from '@shared/imgs/laptop_baytash.webp'
+
 import { Text } from '@shared/ui/Text';
+import AppImage from '@shared/ui/Image';
+import { heroBlock } from '../model/hero.mock';
 
 
 const HeroBlock = () => {
     return (
         <div className={styles.heroBlock}>
             <div className={styles.heroHeader}>
-            <h1 >
-                NevoDevs - <span>создаём технологии</span> сегодня, что бы вы лидировали завтра
+            <h1  dangerouslySetInnerHTML={{ __html: heroBlock.mainText }}>
             </h1>
 
             <div className={styles.casesPreviewBtns}>
-                <AppButton className={styles.caseBtn}> <Text className={styles.text}> Наши кейсы </Text><div className={styles.arrow}><Image src={arrow} alt='стрелка'/></div></AppButton> 
+                <AppButton className={styles.caseBtn}> <Text className={styles.text}> Наши кейсы </Text><div className={styles.arrow}><AppImage src={arrow} alt='стрелка'/></div></AppButton> 
             </div>
 
             <div className={styles.casesPreviewList}>
                 <div className={styles.cardPreviewAboutUs}>
                     <div className={styles.cardImg}>
-                    <Image src={figure} alt='фигура'/>
+                    <AppImage src={heroBlock.cardPreviewAboutUs.img} alt='фигура'/>
                     </div>
-                    <Text> Мы разрабатываем сайты, онлайн-магазины и автоматизируем процессы, чтобы минимизировать ручной труд и увеличить вашу прибыль. Технологии, которые работают на вас – сегодня и в будущем.</Text>
+                    <Text> {heroBlock.cardPreviewAboutUs.text}</Text>
                 </div>
                 <div className={styles.cardPreviewProject}>
-                    <Image src={laptop_baytash} alt='фигура'/>
-                    <Image src={laptop_elite} alt='фигура'/>
+                    <AppImage src={heroBlock.cardPreviewProject.imgOne} />
+                    <AppImage src={heroBlock.cardPreviewProject.imgTwo} />
                 </div>
             </div>
 </div>

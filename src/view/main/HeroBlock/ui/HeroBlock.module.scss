@@ -20,9 +20,12 @@
             }
 
             @media (max-width: 576px) {
+                max-width: 360px;
                 width: 100%;
-                // font-size: 28px;
-                font-size: 38px;
+                font-size: 28px;    
+                line-height: 100%;
+                text-align: center;
+
             }
         }
 
@@ -107,7 +110,7 @@
 
                 img {
                     margin-top: 68px;
-                    margin-left: 100%;
+                    // margin-left: 100%;
 
                     @media (max-width: 576px) {
                         margin-top: 0;
@@ -120,6 +123,7 @@
 
 
             span {
+                line-height: 100%;
                 margin: 0 77px;
                 margin-top: 60px;
                 margin-bottom: 37px;
