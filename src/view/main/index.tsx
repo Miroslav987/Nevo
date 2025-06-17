@@ -1,11 +1,12 @@
 import React from 'react';
-import HeroHeader from './HeroBlock/ui';
 import HeroBlock from './HeroBlock/ui';
+import AboutUs from './AboutUs';
 
 const Main = () => {
     return (
         <>
             <HeroBlock/>
+            <AboutUs/>
         </>
     );
 };
