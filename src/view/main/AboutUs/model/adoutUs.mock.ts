@@ -65,11 +65,11 @@ export const aboutUs: AboutUs = {
         },
         {
             title: 'Интернет Магазины',
-            img: landing
+            img: store
         },
         {
             title: 'Корпоративные сайты',
-            img: landing
+            img: corporate
         },
     ]
 }
