@@ -1,13 +1,13 @@
 import React from 'react';
-import styles from './HeaderBlock.module.scss'
+import styles from './AboutBlock.module.scss'
 import { Text } from '@shared/ui/Text';
 import AppImage from '@shared/ui/Image';
 import cube from '@shared/icons/cube.svg'
 import { aboutUs } from '../../model/adoutUs.mock';
 
-const HeaderBlock = () => {
+const AboutBlock = () => {
     return (
-        <div className={styles.headerBlock}>
+        <div className={styles.aboutBlock}>
             <div className={styles.content}>
                 <div>
                     <Text>О нас</Text>
@@ -43,4 +43,4 @@ const HeaderBlock = () => {
     );
 };
 
-export default HeaderBlock;
+export default AboutBlock;
