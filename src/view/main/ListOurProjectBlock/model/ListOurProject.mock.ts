@@ -1,6 +1,5 @@
 import { StaticImageData } from "next/image";
 import elite_laptop from  '@shared/imgs/laptop_elite_two.webp'
-import laptop_baytash from  '@shared/imgs/laptop_baytash.webp'
 
 export interface CardProject {
     main_img:StaticImageData | null
