@@ -5,7 +5,7 @@ import MissionBlock from './components/MissionBlock';
 import TechStackBlock from './components/TechStackBlock';
 const AboutUs = () => {
     return (
-        <div className={styles.aboutUs}>
+        <div className={`container ${styles.aboutUs}`}>
             <AboutBlock/>
             <MissionBlock/>
             <TechStackBlock/>
