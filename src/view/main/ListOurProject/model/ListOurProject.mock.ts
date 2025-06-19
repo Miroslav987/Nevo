@@ -12,7 +12,7 @@ export interface CardProject {
 export const listOurProject: CardProject[] = [
     {
         main_img:elite_laptop,
-        img_one:null,
+        img_one:elite_laptop,
         img_two:null,
         title: 'Elite Academy',
         description:['Мы помогаем трансформировать систему планирования, организационные процессы, инфраструктуру, а также коммуникационные и материальные ресурсы.','Наша цель — сделать так, чтобы ваша компания уверенно росла и адаптировалась в цифровой среде.']
