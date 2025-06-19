@@ -1,27 +1,16 @@
 import AppImage from '@shared/ui/Image';
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import styles from './OurPartners.module.scss'
-import { Autoplay } from 'swiper/modules';
+import styles from './OurPartnersCarousel.module.scss'
 import { ourPartners } from '../../model/ourPartners..mock';
+import { settingOurPartnersCarousel } from '../../model/settingOurPartnersCarousel';
 
-const OurPartners = () => {
-  const settingSwiper = {
-    spaceBetween: 50,
-    slidesPerView: 5,
-    allowTouchMove: false,
-        loop: true, // добавлен бесконечный цикл
-    speed: 6000,
-    autoplay: {
-      delay: 1,
-      disableOnInteraction: false,
-    },
-    modules: [Autoplay],
-  }
+const OurPartnersCarousel = () => {
+
   return (
     <div className={styles.ourPartners}>
       <Swiper
-        {...settingSwiper}
+        {...settingOurPartnersCarousel}
         className={styles.swiperPartners}
       >
         {ourPartners.map((e, i) =>
@@ -35,4 +24,4 @@ const OurPartners = () => {
   );
 };
 
-export default OurPartners;
+export default OurPartnersCarousel;

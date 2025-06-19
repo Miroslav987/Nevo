@@ -2,186 +2,20 @@
     padding: 100px 0;
     background-color: var(--color-text-primary);
 
+    @media (max-width: 576px) {
+        padding-top: 30px;
+        padding-bottom: 71px;
+    }
+
 
     .title {
         font-size: 60px;
         font-weight: 400;
         color: var(--color-background-primary);
-    }
 
-    .teamWrapper {
-        margin-top: 66px;
-        display: flex;
-        gap: 121px;
-
-        span {
-            color: var(--color-background-primary);
-            font-weight: 500;
-
+        @media (max-width: 576px) {
+            font-size: 40px;
         }
-
-
-
-        :global(.swiper-slide.swiper-slide-active) {
-            opacity: 1;
-        }
-
-
-
-        :global(.swiper-slide) {
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            transition-delay: 0s; 
-            display: flex;
-            gap: 121px;
-        }
-
-        :global(.swiper-slide.swiper-slide-active) {
-            opacity: 1;
-            transition-delay: 0.7s; 
-        }
-
-        .swiperImage {
-            border-radius: 25px;
-
-            .slideImage {
-                position: relative;
-
-                img {
-                    object-fit: cover;
-                    border-radius: 25px;
-                }
-
-                .mainInfo {
-                    display: flex;
-                    align-items: end;
-                    gap: 30px;
-                    margin-bottom: 60px;
-
-                    .name {
-                        font-size: 30px;
-                    }
-
-                    .position {
-                        font-size: 22px;
-                        opacity: 70%;
-                    }
-                }
-
-                .quote {
-                    opacity: 70%;
-                }
-            }
-
-            .navigation {
-                width: 100%;
-                position: absolute;
-                z-index: 10;
-                top: 40%;
-                left: 50%;
-                padding-bottom: 61px;
-                border-bottom: 1px solid var(--color-text-secondary);
-                margin-top: 20px;
-                display: flex;
-                gap: 12px;
-
-                .navButton {
-                    width: 49px;
-                    height: 49px;
-                    border-radius: 50%;
-                    background: var(--color-background-primary);
-                }
-
-                .navButton:last-child {
-                    transform: rotate(180deg);
-                }
-            }
-        }
-
-
-
-
-
-
-    }
-
-    .teamWrapper2 {
-        margin-top: 66px;
-        display: flex;
-        gap: 121px;
-
-        span {
-            color: var(--color-background-primary);
-            font-weight: 500;
-
-        }
-
-        .swiperImage,
-        .swiperText {
-            width: 100%;
-            max-width: 685px;
-        }
-
-        .swiperImage {
-            border-radius: 25px;
-
-            .slideImage {
-
-                img {
-                    object-fit: cover;
-                    border-radius: 25px;
-                }
-
-            }
-        }
-
-        .sectionSwiperAndNav {
-            .swiperText {
-                .slideText {
-                    .mainInfo {
-                        display: flex;
-                        align-items: end;
-                        gap: 30px;
-                        margin-bottom: 60px;
-
-                        .name {
-                            font-size: 30px;
-                        }
-
-                        .position {
-                            font-size: 22px;
-                            opacity: 70%;
-                        }
-                    }
-
-                    .quote {
-                        opacity: 70%;
-
-                    }
-
-                }
-
-                .navigation {
-                    margin-top: 80px;
-                    padding-bottom: 61px;
-                    border-bottom: 1px solid var(--color-text-secondary);
-                    display: flex;
-                    gap: 12px;
-
-                    .navButton {
-                        width: 49px;
-                        height: 49px;
-                        border-radius: 50%;
-                        background: var(--color-background-primary);
-                    }
-
-                    .navButton:last-child {
-                        transform: rotate(180deg);
-                    }
-                }
-            }
-        }
-
     }
 
 }

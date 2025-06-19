@@ -1,18 +1,23 @@
 .ourPartners {
     position: relative;
     z-index: 11;
-    
+
+    @media (max-width: 576px) {
+        display: none;
+    }
+
     .swiperPartners {
         border-radius: 30px;
         margin-top: 146px;
 
         :global(.swiper-wrapper) {
-            transition-timing-function: linear !important; // делает движение равномерным
+            transition-timing-function: linear !important;
         }
 
     }
 
     .shadows {
+
         &::before,
         &::after {
             content: '';
@@ -21,19 +26,18 @@
             width: 50%;
             height: 100%;
             z-index: 1;
-            // background: linear-gradient(90deg, #050505 0%, rgba(5, 5, 5, 0) 40%, rgba(5, 5, 5, 0) 60%, #050505 100%);
 
         }
 
         &::before {
             left: 0;
-            background: linear-gradient(to left,  #05050500 60%, var(--color-text-primary) 100%);
+            background: linear-gradient(to left, #05050500 60%, var(--color-text-primary) 100%);
         }
-        
+
         &::after {
             right: 0;
             background: linear-gradient(to left, var(--color-text-primary) 0%, #05050500 40%);
-            
+
         }
     }
 }
