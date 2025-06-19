@@ -1,18 +1,18 @@
 import React from 'react';
-import styles from './HeroBlock.module.scss'
+import styles from './Hero.module.scss'
 import AppButton from '@shared/ui/Button';
 import arrow from '@shared/icons/arrow.svg'
 
 import { Text } from '@shared/ui/Text';
 import AppImage from '@shared/ui/Image';
-import { heroBlock } from '../model/hero.mock';
+import { hero } from '../model/hero.mock';
 
 
-const HeroBlock = () => {
+const Hero = () => {
     return (
-        <div className={styles.heroBlock}>
+        <div className={styles.hero}>
             <div className={styles.heroHeader}>
-            <h1  dangerouslySetInnerHTML={{ __html: heroBlock.mainText }}>
+            <h1  dangerouslySetInnerHTML={{ __html: hero.mainText }}>
             </h1>
 
             <div className={styles.casesPreviewBtns}>
@@ -22,13 +22,13 @@ const HeroBlock = () => {
             <div className={styles.casesPreviewList}>
                 <div className={styles.cardPreviewAboutUs}>
                     <div className={styles.cardImg}>
-                    <AppImage src={heroBlock.cardPreviewAboutUs.img} alt='фигура'/>
+                    <AppImage src={hero.cardPreviewAboutUs.img} alt='фигура'/>
                     </div>
-                    <Text> {heroBlock.cardPreviewAboutUs.text}</Text>
+                    <Text> {hero.cardPreviewAboutUs.text}</Text>
                 </div>
                 <div className={styles.cardPreviewProject}>
-                    <AppImage src={heroBlock.cardPreviewProject.imgOne} />
-                    <AppImage src={heroBlock.cardPreviewProject.imgTwo} />
+                    <AppImage src={hero.cardPreviewProject.imgOne} />
+                    <AppImage src={hero.cardPreviewProject.imgTwo} />
                 </div>
             </div>
 </div>
@@ -36,4 +36,4 @@ const HeroBlock = () => {
     );
 };
 
-export default HeroBlock;
+export default Hero;

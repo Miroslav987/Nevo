@@ -12,14 +12,14 @@ interface CardPreviewProject {
     imgTwo:StaticImageData
 }
 
-interface HeroBlock {
+interface Hero {
     mainText:string
     cardPreviewAboutUs:CardPreviewAboutUs
     cardPreviewProject:CardPreviewProject
 }
 
 
-export const heroBlock:HeroBlock = {
+export const hero:Hero = {
     mainText:'NevoDevs - <span>создаём технологии</span> сегодня, что бы вы лидировали завтра',
     cardPreviewAboutUs:{
         img:figure,

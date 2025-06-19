@@ -1,11 +1,11 @@
 import React from 'react';
-import HeroBlock from './HeroBlock/ui';
+import Hero from './Hero/ui';
 import AboutUs from './AboutUs';
 
 const Main = () => {
     return (
         <>
-            <HeroBlock/>
+            <Hero/>
             <AboutUs/>
         </>
     );
