@@ -2,6 +2,7 @@
 import Header from "@widgets/Header/ui";
 import type { Metadata } from "next";
 import '@shared/styles/global.scss';
+import Footer from "@widgets/Footer/ui";
 
 export const metadata: Metadata = {
   title: "Nevo Devs",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <main >
         {children}
         </main>
+        <Footer/>
       </body>
     </html>
   );
