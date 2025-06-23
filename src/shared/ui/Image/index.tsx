@@ -6,7 +6,7 @@ import { StaticImageData } from 'next/image'
 import styles from './AppImage.module.scss'
 
 interface AppImageProps {
-  src?: StaticImageData | string
+  src?: StaticImageData | string |null
 }
 
 const AppImage: FC<AppImageProps & Omit<ImageProps, 'src'>> = ({

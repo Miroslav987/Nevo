@@ -1,0 +1,25 @@
+.ourProject {
+    margin-top: 50px;
+    h2 {
+        width: 49%;
+        font-size: 40px;
+        font-weight: 400;
+
+        @media (max-width: 1000px) {
+            width: 100%;
+        }
+        @media (max-width: 576px) {
+            font-size: 24px;
+        }
+    }
+
+    .listProject {
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        @media (max-width: 576px) {
+             margin-top: 30px;
+        }
+    }
+}

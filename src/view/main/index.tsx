@@ -2,6 +2,7 @@ import React from 'react';
 import HeroBlock from './HeroBlock/ui';
 import AboutUs from './AboutUs';
 import OurTeam from './OurTeam/ui';
+import ListOurProject from './ListOurProject/ui';
 
 const Main = () => {
     return (
@@ -9,6 +10,7 @@ const Main = () => {
             <HeroBlock/>
             <AboutUs/>
             <OurTeam/>
+            <ListOurProject/>
         </>
     );
 };
