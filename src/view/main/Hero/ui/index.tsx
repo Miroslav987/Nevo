@@ -12,26 +12,26 @@ const Hero = () => {
     return (
         <div className={`container ${styles.hero}`}>
             <div className={styles.heroHeader}>
-            <h1  dangerouslySetInnerHTML={{ __html: hero.mainText }}>
-            </h1>
+                <h1 dangerouslySetInnerHTML={{ __html: hero.mainText }}>
+                </h1>
 
-            <div className={styles.casesPreviewBtns}>
-                <AppButton className={styles.caseBtn}> <Text className={styles.text}> Наши кейсы </Text><div className={styles.arrow}><AppImage src={arrow} alt='стрелка'/></div></AppButton> 
-            </div>
+                <div className={styles.casesPreviewBtns}>
+                    <AppButton className={styles.caseBtn}> <Text className={styles.text}> Наши кейсы </Text><div className={styles.arrow}><AppImage src={arrow} alt='стрелка' /></div></AppButton>
+                </div>
 
-            <div className={styles.casesPreviewList}>
-                <div className={styles.cardPreviewAboutUs}>
-                    <div className={styles.cardImg}>
-                    <AppImage src={hero.cardPreviewAboutUs.img} alt='фигура'/>
+                <div className={styles.casesPreviewList}>
+                    <div className={styles.cardPreviewAboutUs}>
+                        <div className={styles.cardImg}>
+                            <AppImage src={hero.cardPreviewAboutUs.img} alt='фигура' />
+                        </div>
+                        <Text> {hero.cardPreviewAboutUs.text}</Text>
                     </div>
-                    <Text> {hero.cardPreviewAboutUs.text}</Text>
-                </div>
-                <div className={styles.cardPreviewProject}>
-                    <AppImage src={hero.cardPreviewProject.imgOne} />
-                    <AppImage src={hero.cardPreviewProject.imgTwo} />
+                    <div className={styles.cardPreviewProject}>
+                        <AppImage src={hero.cardPreviewProject.imgOne} />
+                        <AppImage src={hero.cardPreviewProject.imgTwo} />
+                    </div>
                 </div>
             </div>
-</div>
         </div>
     );
 };
