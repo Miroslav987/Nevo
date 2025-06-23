@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper/types';
 import styles from './OurTeamSwiper.module.scss'
@@ -47,7 +48,13 @@ const OurTeamSwiper = () => {
             >
                 {ourTeam.map((e, i) =>
                     <SwiperSlide key={i} className={styles.slideImage}>
-                        <AppImage src={e.img} />
+                        <motion.div
+                            initial={{ width: "50%", height: '50%' }}
+                            whileInView={{ width: "100%", height: '100%' }}
+                            transition={{ duration: 1 }}
+                            viewport={{ once: true, }}>
+                            <AppImage src={e.img} />
+                        </motion.div>
                     </SwiperSlide>
                 )}
             </Swiper>
@@ -59,13 +66,19 @@ const OurTeamSwiper = () => {
                     className={styles.swiperText}
                 >{ourTeam.map((e, i) =>
                     <SwiperSlide key={i} className={styles.slideText}>
-                        <div className={styles.mainInfo}>
-                            <Text className={styles.name}>{e.name}</Text>
-                            <Text className={styles.position}>{e.position}</Text>
-                        </div>
-                        <Text className={styles.quote}>
-                            {e.quote}
-                        </Text>
+                        <motion.div
+                            initial={{ opacity: 0, y: 100, x: 100 }}
+                            whileInView={{ opacity: 1, y: 0, x: 20 }}
+                            transition={{ duration: 1 }}
+                            viewport={{ once: true}}>
+                            <div className={styles.mainInfo}>
+                                <Text className={styles.name}>{e.name}</Text>
+                                <Text className={styles.position}>{e.position}</Text>
+                            </div>
+                            <Text className={styles.quote}>
+                                {e.quote}
+                            </Text>
+                        </motion.div>
                     </SwiperSlide>
                 )}
                 </Swiper>

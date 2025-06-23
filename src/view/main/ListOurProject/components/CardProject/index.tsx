@@ -1,4 +1,6 @@
+"use client"
 import React from 'react';
+import { motion } from 'framer-motion';
 import styles from './CardProject.module.scss'
 import AppImage from '@shared/ui/Image';
 import { Text } from '@shared/ui/Text';
@@ -11,12 +13,17 @@ type CardProjectProps = {
 
 const CardProject = ({ card }: CardProjectProps) => {
     return (
-        <div className={styles.cardProject}>
+        <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className={styles.cardProject}>
             <div className={styles.mainImg}><AppImage src={card.main_img} /></div>
             <div className={styles.info}>
                 <div className={styles.infoImages}>
-                        <AppImage src={card.img_one} />
-                        <AppImage src={card.img_two} />
+                    <AppImage src={card.img_one} />
+                    <AppImage src={card.img_two} />
                 </div>
                 <div className={styles.infoText}>
                     <Text className={styles.title}>{card.title}</Text>
@@ -27,7 +34,7 @@ const CardProject = ({ card }: CardProjectProps) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
