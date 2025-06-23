@@ -1,0 +1,11 @@
+.ctaButton {
+    width: 160px;
+    height: 49px;
+    color: var(--color-background-primary);
+    background: var(--color-gradient-accent);
+    font-size: 16px;
+    &:hover {
+        color: var(--color-background-primary) !important;
+        background: var(--color-gradient-accent) !important;
+    }
+}

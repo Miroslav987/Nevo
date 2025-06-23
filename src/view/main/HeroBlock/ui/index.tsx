@@ -10,7 +10,7 @@ import { heroBlock } from '../model/hero.mock';
 
 const HeroBlock = () => {
     return (
-        <div className={styles.heroBlock}>
+        <div className={`container ${styles.heroBlock}`}>
             <div className={styles.heroHeader}>
             <h1  dangerouslySetInnerHTML={{ __html: heroBlock.mainText }}>
             </h1>
