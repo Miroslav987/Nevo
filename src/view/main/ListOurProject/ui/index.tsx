@@ -4,7 +4,7 @@ import { listOurProject } from '../model/ListOurProject.mock';
 import CardProject from '../components/CardProject';
 const ListOurProject = () => {
     return (
-        <div className={styles.ourProject}>
+        <div className={`container ${styles.ourProject}`}>
             <h2 className={styles.title}>Ознакомьтесь с кейсами работ
                 нашей студии IT Разработки</h2>
                 <div className={styles.listProject}>
