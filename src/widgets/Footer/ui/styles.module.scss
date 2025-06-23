@@ -1,0 +1,31 @@
+.footer {
+    height: 500px;
+    margin-bottom: 30px;
+    border: 1px solid var(--color-background-secondary);
+    border-radius: 15px 15px 0 0;
+    .content {
+        padding: 50px 20px;
+        @media (max-width: 576px) {
+            padding: 50px 10px;
+        }
+        .linksAndCTA {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 100px;
+            justify-content: space-between;
+             @media (max-width: 1000px) {
+                gap: 40px;
+                flex-direction: column;
+             }
+        }
+        .btnBlock {
+            margin: 50px 0;
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            @media (max-width: 576px) {
+                justify-content: start;
+            }
+        }
+    }
+}

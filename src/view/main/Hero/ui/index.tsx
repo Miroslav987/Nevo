@@ -10,7 +10,7 @@ import { hero } from '../model/hero.mock';
 
 const Hero = () => {
     return (
-        <div className={styles.hero}>
+        <div className={`container ${styles.hero}`}>
             <div className={styles.heroHeader}>
             <h1  dangerouslySetInnerHTML={{ __html: hero.mainText }}>
             </h1>

@@ -1,3 +1,9 @@
 :global(.ant-image-error) img {
-max-height: 400px;
+    max-height: 400px;
+}
+
+:global(.ant-image) img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
