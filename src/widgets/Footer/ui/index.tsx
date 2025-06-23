@@ -1,4 +1,6 @@
+"use client"
 import React from 'react';
+import { motion } from 'framer-motion';
 import styles from './styles.module.scss'
 import FooterNav from '@entities/footer/ui/FooterNav';
 import CTAHeading from '@entities/footer/ui/CTAHeading';
@@ -8,7 +10,11 @@ import FooterBrand from '@entities/footer/ui/FooterBrand';
 const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <div className={`container ${styles.content}`}>
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1, }}
+                transition={{ duration: 1.3 }}
+                viewport={{ once: true }} className={`container ${styles.content}`}>
 
                 <div className={styles.linksAndCTA}>
                     <CTAHeading />
@@ -23,7 +29,7 @@ const Footer = () => {
 
                 <FooterBrand />
 
-            </div>
+            </motion.div>
         </footer>
     );
 };
