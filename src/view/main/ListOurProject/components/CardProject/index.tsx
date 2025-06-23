@@ -21,8 +21,8 @@ const CardProject = ({ card }: CardProjectProps) => {
                 <div className={styles.infoText}>
                     <Text className={styles.title}>{card.title}</Text>
                     <div className={styles.description}>
-                        {card.description.map((text) =>
-                            <Text className={styles.text}>{text} </Text>
+                        {card.description.map((text, i) =>
+                            <Text key={i} className={styles.text}>{text} </Text>
                         )}
                     </div>
                 </div>

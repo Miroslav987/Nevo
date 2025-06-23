@@ -8,8 +8,8 @@ const ListOurProject = () => {
             <h2 className={styles.title}>Ознакомьтесь с кейсами работ
                 нашей студии IT Разработки</h2>
                 <div className={styles.listProject}>
-                    {listOurProject.map((card)=>
-                        <CardProject card={card}/>
+                    {listOurProject.map((card,i)=>
+                        <CardProject key={i} card={card}/>
                     )}
                 </div>
         </div>
