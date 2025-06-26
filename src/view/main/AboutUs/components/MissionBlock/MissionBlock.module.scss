@@ -13,7 +13,6 @@
   @media (max-width: 576px) {
     margin-top: 40px;
   }
-  
 
   .rings {
     width: 40%;
@@ -38,15 +37,14 @@
     .ring {
       --step: 20px;
       --offset-top: calc(var(--i) * var(--step) * 2);
-      --offset-left: calc(var(--i) * var(--step) * .7);
+      --offset-left: calc(var(--i) * var(--step) * 0.7);
       --size: calc(100% - var(--i) * 2.5 * var(--step));
-      
+
       @media (max-width: 576px) {
         --step: 20px;
         --offset-top: calc(var(--i) * var(--step) * 1.4);
         --offset-left: calc(var(--i) * var(--step) * 0.5);
         --size: calc(100% - var(--i) * 1.8 * var(--step));
-        
       }
 
       position: absolute;
@@ -59,7 +57,7 @@
       z-index: 0;
 
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         inset: 0;
         border-radius: 50%;
@@ -109,6 +107,4 @@
       }
     }
   }
-
-
 }

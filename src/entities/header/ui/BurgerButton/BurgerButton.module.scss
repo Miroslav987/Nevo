@@ -1,15 +1,13 @@
 .burgerBtn {
-    background: none;
-    display: none;
+  background: none;
+  display: none;
 
-    img {
-        width: 24px;
-        height: 24px;
+  img {
+    width: 24px;
+    height: 24px;
+  }
 
-    }
-
-    @media (max-width: 576px) {
-        display: block;
-
-    }
+  @media (max-width: 576px) {
+    display: block;
+  }
 }

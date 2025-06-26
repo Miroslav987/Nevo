@@ -1,9 +1,11 @@
-import React, { FC } from 'react';
-import { Button, ButtonProps } from 'antd';
-import styles from './AppButton.module.scss';
+import React, { FC } from 'react'
+
+import { Button, ButtonProps } from 'antd'
+
+import styles from './AppButton.module.scss'
 
 interface AppButtonProps extends ButtonProps {
-  className?: string;
+  className?: string
 }
 
 const AppButton: FC<AppButtonProps> = ({ className, children, ...props }) => {
@@ -11,7 +13,7 @@ const AppButton: FC<AppButtonProps> = ({ className, children, ...props }) => {
     <Button className={`${styles.appButton} ${className || ''}`} {...props}>
       {children}
     </Button>
-  );
-};
+  )
+}
 
-export default AppButton;
+export default AppButton

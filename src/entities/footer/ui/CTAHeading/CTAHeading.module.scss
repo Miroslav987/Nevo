@@ -1,14 +1,13 @@
 .ctaheading {
-    font-size: 50px;
-    font-weight: 400;
+  font-size: 50px;
+  font-weight: 400;
 
-    @media (max-width: 576px) {
-        font-size: 44px;
-    }
+  @media (max-width: 576px) {
+    font-size: 44px;
+  }
 
-    span {
-        color: var(--color-text-secondary);
-        font-size: inherit;
-    }
-
+  span {
+    color: var(--color-text-secondary);
+    font-size: inherit;
+  }
 }

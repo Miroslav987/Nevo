@@ -1,18 +1,19 @@
-import React from 'react';
-import Hero from './Hero/ui';
-import AboutUs from './AboutUs';
-import OurTeam from './OurTeam/ui';
-import ListOurProject from './ListOurProject/ui';
+import React from 'react'
+
+import AboutUs from './AboutUs'
+import Hero from './Hero/ui'
+import ListOurProject from './ListOurProject/ui'
+import OurTeam from './OurTeam/ui'
 
 const Main = () => {
-    return (
-        <>
-            <Hero/>
-            <AboutUs/>
-            <OurTeam/>
-            <ListOurProject/>
-        </>
-    );
-};
+  return (
+    <>
+      <Hero />
+      <AboutUs />
+      <OurTeam />
+      <ListOurProject />
+    </>
+  )
+}
 
-export default Main;
+export default Main

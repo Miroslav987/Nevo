@@ -1,22 +1,22 @@
 .linksGroup {
-    .title {
-        text-transform: uppercase;
-        font-weight: 500;
-        line-height: 140%;
-        color: var(--color-text-secondary);
-        @media (max-width: 576px) {
-            display: block;
-            width: 159px;
-        }
+  .title {
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 140%;
+    color: var(--color-text-secondary);
+    @media (max-width: 576px) {
+      display: block;
+      width: 159px;
     }
-    .links {
-        margin-top: 24px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        a {
-            text-decoration: none;
-            font-size: 16px;
-        }
+  }
+  .links {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    a {
+      text-decoration: none;
+      font-size: 16px;
     }
+  }
 }

@@ -1,21 +1,19 @@
 .ourTeam {
-    padding: 100px 0;
-    background-color: var(--color-text-primary);
+  padding: 100px 0;
+  background-color: var(--color-text-primary);
+
+  @media (max-width: 576px) {
+    padding-top: 30px;
+    padding-bottom: 71px;
+  }
+
+  .title {
+    font-size: 60px;
+    font-weight: 400;
+    color: var(--color-background-primary);
 
     @media (max-width: 576px) {
-        padding-top: 30px;
-        padding-bottom: 71px;
+      font-size: 40px;
     }
-
-
-    .title {
-        font-size: 60px;
-        font-weight: 400;
-        color: var(--color-background-primary);
-
-        @media (max-width: 576px) {
-            font-size: 40px;
-        }
-    }
-
+  }
 }
