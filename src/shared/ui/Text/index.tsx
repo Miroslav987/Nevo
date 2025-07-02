@@ -1,12 +1,13 @@
-'use client';
+'use client'
 
-import { Typography } from 'antd';
-import React from 'react';
+import React from 'react'
 
-const { Text: AntText } = Typography;
+import { Typography } from 'antd'
 
-type Props = React.ComponentProps<typeof AntText>;
+const { Text: AntText } = Typography
+
+type Props = React.ComponentProps<typeof AntText>
 
 export const Text = (props: Props) => {
-  return <AntText {...props}  />;
-};
+  return <AntText {...props} />
+}

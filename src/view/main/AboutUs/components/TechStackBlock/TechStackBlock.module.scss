@@ -1,57 +1,56 @@
 .techStackBlock {
-    margin-top: 81px;
-    margin-bottom: 90px;
-    padding-left: 62px;
-    display: flex;
-    border-top: 1px solid var(--color-background-secondary);
-    border-bottom: 1px solid var(--color-background-secondary);
+  margin-top: 81px;
+  margin-bottom: 90px;
+  padding-left: 62px;
+  display: flex;
+  border-top: 1px solid var(--color-background-secondary);
+  border-bottom: 1px solid var(--color-background-secondary);
 
-    @media (max-width: 1300px) {
-        margin-top: 20px;
-        border: none;
-        padding-left: 0;
-        justify-content: center;
-        flex-wrap: wrap;
+  @media (max-width: 1300px) {
+    margin-top: 20px;
+    border: none;
+    padding-left: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .toolsCard {
+    padding: 71px 47px 0 36px;
+
+    @media (max-width: 576px) {
+      padding: 0;
+      padding-top: 45px;
     }
 
-    .toolsCard {
-        padding: 71px 47px 0 36px;
+    .toolsTitle {
+      width: 100%;
+      font-size: 30px;
+      font-weight: 500;
+
+      @media (max-width: 576px) {
+        font-size: 26px;
+      }
+    }
+
+    .toolsInfo {
+      display: flex;
+      gap: 5px;
+      margin-top: 93px;
+
+      @media (max-width: 576px) {
+        margin-top: 40px;
+        gap: 49px;
+        flex-direction: column;
+      }
+
+      span {
+        letter-spacing: -0.5px;
+        color: var(--color-text-secondary);
 
         @media (max-width: 576px) {
-            padding: 0;
-            padding-top: 45px;
-
+          width: 60%;
         }
-
-        .toolsTitle {
-            width: 100%;
-            font-size: 30px;
-            font-weight: 500;
-
-            @media (max-width: 576px) {
-                font-size: 26px;
-            }
-        }
-
-        .toolsInfo {
-            display: flex;
-            gap: 5px;
-            margin-top: 93px;
-
-            @media (max-width: 576px) {
-                margin-top: 40px;
-                gap: 49px;
-                flex-direction: column;
-            }
-
-            span {
-                letter-spacing: -0.5px;
-                color: var(--color-text-secondary);
-
-                @media (max-width: 576px) {
-                    width: 60%;
-                }
-            }
-        }
+      }
     }
+  }
 }

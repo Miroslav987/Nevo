@@ -1,9 +1,9 @@
 .footerNav {
-    width: 100%;
-    display: flex;
-    gap: 100px;
-    @media (max-width: 576px) {
-        gap: 10px;
-        justify-content: space-between;
-    }
+  width: 100%;
+  display: flex;
+  gap: 100px;
+  @media (max-width: 576px) {
+    gap: 10px;
+    justify-content: space-between;
+  }
 }

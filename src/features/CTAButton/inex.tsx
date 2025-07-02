@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
+
+import AppButton from '@shared/ui/Button'
+
 import styles from './CTAButton.module.scss'
-import AppButton from '@shared/ui/Button';
 
 const CTAButton = () => {
-    return (
-            <AppButton className={styles.ctaButton}>Начните сейчас</AppButton>
-    );
-};
+  return <AppButton className={styles.ctaButton}>Начните сейчас</AppButton>
+}
 
-export default CTAButton;
+export default CTAButton

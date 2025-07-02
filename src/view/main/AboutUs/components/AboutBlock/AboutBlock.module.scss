@@ -1,207 +1,205 @@
 .aboutBlock {
-    margin-top: 93px;
+  margin-top: 93px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-background-secondary);
+  border-bottom: 1px solid var(--color-background-secondary);
+
+  @media (max-width: 1000px) {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+
+  .content,
+  .stats {
+    width: 100%;
+    margin-top: 35px;
+  }
+
+  .line {
+    width: 1px;
+    background: var(--color-background-secondary);
+  }
+
+  .content {
+    padding-bottom: 67px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    border-top: 1px solid var(--color-background-secondary);
-    border-bottom: 1px solid var(--color-background-secondary);
-    
-    @media (max-width: 1000px) {
-        margin-top: 40px;
+
+    @media (max-width: 576px) {
+      padding-bottom: 35px;
+      border-bottom: 1px solid var(--color-background-secondary);
+    }
+
+    span {
+      font-weight: 500;
+      font-size: 22px;
+    }
+
+    h2 {
+      padding-right: 10%;
+      margin-top: 30px;
+      font-weight: 400;
+
+      @media (max-width: 576px) {
+        font-size: 28px;
+      }
+
+      span {
+        color: var(--color-text-secondary);
+        font-size: inherit;
+      }
+    }
+
+    .cubeIcon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 62px;
+      height: 62px;
+      border-radius: 500px;
+      background: var(--color-gradient-accent);
+      margin-top: 70px;
+      margin-bottom: 25px;
+    }
+
+    .subTitle {
+      background: var(--color-gradient-accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .stats {
+    padding: 0 33px 38px 35px;
+
+    @media (max-width: 576px) {
+      padding: 0;
+    }
+
+    .statDescp {
+      font-weight: 500;
+      line-height: 100%;
+    }
+
+    .statCard {
+      margin: 0 10px;
+      margin-top: 56px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+      @media (max-width: 800px) {
         flex-direction: column;
+        margin: 0;
+        margin-top: 56px;
+      }
+
+      .statValue {
+        white-space: nowrap;
+        font-size: 180px;
+        font-weight: 500;
+        line-height: 100%;
+
+        @media (max-width: 576px) {
+          font-size: 150px;
+        }
+      }
+
+      .statLabel {
+        font-size: 38px;
+        font-weight: 600;
+        line-height: 100%;
+
+        @media (max-width: 576px) {
+          text-align: center;
+        }
+      }
     }
-    
-    .content,
-    .stats {
-        width: 100%;
-        margin-top: 35px;
-    }
-    
-    .line {
-        width: 1px;
-        background: var(--color-background-secondary);
-    }
-    
-    .content {
-        padding-bottom: 67px;
+
+    .statsComparison {
+      margin-top: 84px;
+      padding-left: 40px;
+      padding-right: 68px;
+      display: flex;
+      align-items: end;
+      border-bottom: 1px solid var(--color-background-secondary);
+
+      @media (max-width: 576px) {
+        margin-top: 56px;
+        padding: 0;
+      }
+
+      .resultCard,
+      .companyCard {
+        padding: 21px;
+        width: 246px;
+
+        .resultValue,
+        .companyLabel {
+          font-weight: 700;
+          line-height: 100%;
+          font-size: 26px;
+        }
+      }
+
+      .resultCard {
+        height: 232px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        
-        @media (max-width: 576px) {
-            padding-bottom: 35px;
-            border-bottom: 1px solid var(--color-background-secondary);
+        border: 1px solid var(--color-background-secondary);
 
+        @media (max-width: 576px) {
+          padding: 56px 17px 0px 17px;
+          width: 202px;
+          height: 190px;
         }
 
-        span {
-            font-weight: 500;
+        .resultLabel {
+          padding-top: 16px;
+          font-size: 15px;
+          @media (max-width: 576px) {
+            padding-top: 34px;
+          }
+        }
+      }
+
+      .companyCard {
+        height: 129px;
+        background: var(--color-text-primary);
+
+        @media (max-width: 576px) {
+          padding: 49px 14px 26px 14px;
+          width: 159px;
+        }
+
+        .companyLabel {
+          color: var(--color-background-primary);
+
+          @media (max-width: 576px) {
             font-size: 22px;
+          }
         }
-
-        h2 {
-            padding-right: 10%;
-            margin-top: 30px;
-            font-weight: 400;
-
-            @media (max-width: 576px) {
-                font-size: 28px;
-            }
-
-            span {
-                color: var(--color-text-secondary);
-                font-size: inherit;
-            }
-        }
-
-        .cubeIcon {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 62px;
-            height: 62px;
-            border-radius: 500px;
-            background: var(--color-gradient-accent);
-            margin-top: 70px;
-            margin-bottom: 25px;
-        }
-
-        .subTitle {
-            background: var(--color-gradient-accent);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+      }
     }
 
-    .stats {
-        padding: 0 33px 38px 35px;
+    .verticalLine {
+      height: 40px;
+      background-image:
+        repeating-linear-gradient(to right, #fff -8px 1px, #0000 0px 3px),
+        linear-gradient(var(--color-accent-start), var(--color-accent-end));
+      height: 40px;
+      margin-top: 32px;
+      box-shadow: inset 0px 0px 0px 1px var(--color-background-primary);
 
-        @media (max-width: 576px) {
-            padding: 0;
-        }
-
-        .statDescp {
-            font-weight: 500;
-            line-height: 100%;
-        }
-
-        .statCard {
-            margin: 0 10px;
-            margin-top: 56px;
-            display: flex;
-            align-items: center;
-            gap: 24px;
-
-
-
-            @media (max-width: 800px) {
-                flex-direction: column;
-                margin: 0;
-                margin-top: 56px;
-            }
-
-            .statValue {
-                white-space: nowrap;
-                font-size: 180px;
-                font-weight: 500;
-                line-height: 100%;
-
-                @media (max-width: 576px) {
-                    font-size: 150px;
-                }
-
-            }
-
-            .statLabel {
-                font-size: 38px;
-                font-weight: 600;
-                line-height: 100%;
-
-                @media (max-width: 576px) {
-                    text-align: center;
-                }
-            }
-        }
-
-        .statsComparison {
-            margin-top: 84px;
-            padding-left: 40px;
-            padding-right: 68px;
-            display: flex;
-            align-items: end;
-            border-bottom: 1px solid var(--color-background-secondary);
-
-            @media (max-width: 576px) {
-                margin-top: 56px;
-                padding: 0;
-            }
-
-            .resultCard,
-            .companyCard {
-                padding: 21px;
-                width: 246px;
-
-                .resultValue,
-                .companyLabel {
-                    font-weight: 700;
-                    line-height: 100%;
-                    font-size: 26px;
-                }
-            }
-
-            .resultCard {
-                height: 232px;
-                display: flex;
-                flex-direction: column;
-                border: 1px solid var(--color-background-secondary);
-
-                @media (max-width: 576px) {
-                    padding: 56px 17px 0px 17px;
-                    width: 202px;
-                    height: 190px;
-                }
-
-                .resultLabel {
-                    padding-top: 16px;
-                    font-size: 15px;
-                    @media (max-width: 576px) {
-                        padding-top: 34px;
-                    }
-
-                }
-            }
-
-            .companyCard {
-                height: 129px;
-                background: var(--color-text-primary);
-
-                @media (max-width: 576px) {
-                    padding: 49px 14px 26px 14px;
-                    width: 159px;
-                }
-
-                .companyLabel {
-                    color: var(--color-background-primary);
-
-                    @media (max-width: 576px) {
-                        font-size: 22px;
-                    }
-
-                }
-            }
-        }
-
-        .verticalLine {
-            height: 40px;
-            background-image: repeating-linear-gradient(to right, #fff -8px 1px, #0000 0px 3px), linear-gradient(var(--color-accent-start), var(--color-accent-end));
-            height: 40px;
-            margin-top: 32px;
-            box-shadow: inset 0px 0px 0px 1px var(--color-background-primary);
-
-            @media (max-width: 576px) {
-                background-image: repeating-linear-gradient(to right, #fff -5px 1px, #0000 0px 3px), linear-gradient(var(--color-accent-start), var(--color-accent-end));
-                margin-top: 9px;
-                height: 24px;
-            }
-        }
+      @media (max-width: 576px) {
+        background-image:
+          repeating-linear-gradient(to right, #fff -5px 1px, #0000 0px 3px),
+          linear-gradient(var(--color-accent-start), var(--color-accent-end));
+        margin-top: 9px;
+        height: 24px;
+      }
     }
+  }
 }
