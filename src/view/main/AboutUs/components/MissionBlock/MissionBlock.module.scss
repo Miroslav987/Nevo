@@ -14,65 +14,6 @@
     margin-top: 40px;
   }
 
-  .rings {
-    width: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @media (max-width: 1000px) {
-      width: 100%;
-    }
-
-    .ringsWrapper {
-      position: relative;
-      width: 350px;
-      height: 350px;
-      @media (max-width: 576px) {
-        width: 245px;
-        height: 245px;
-      }
-    }
-
-    .ring {
-      --step: 20px;
-      --offset-top: calc(var(--i) * var(--step) * 2);
-      --offset-left: calc(var(--i) * var(--step) * 0.7);
-      --size: calc(100% - var(--i) * 2.5 * var(--step));
-
-      @media (max-width: 576px) {
-        --step: 20px;
-        --offset-top: calc(var(--i) * var(--step) * 1.4);
-        --offset-left: calc(var(--i) * var(--step) * 0.5);
-        --size: calc(100% - var(--i) * 1.8 * var(--step));
-      }
-
-      position: absolute;
-      top: var(--offset-top);
-      left: var(--offset-left);
-      width: var(--size);
-      height: var(--size);
-      border-radius: 50%;
-      background-color: white;
-      z-index: 0;
-
-      &::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        border-radius: 50%;
-        padding: 3px;
-        background: linear-gradient(45deg, var(--color-accent-start), var(--color-accent-end));
-        -webkit-mask:
-          linear-gradient(#fff 0 0) content-box,
-          linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
-        z-index: -1;
-      }
-    }
-  }
-
   .missionInfo {
     width: 60%;
 
