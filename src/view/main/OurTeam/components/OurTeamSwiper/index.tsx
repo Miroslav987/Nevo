@@ -54,7 +54,7 @@ const OurTeamSwiper = () => {
               transition={{ duration: 1 }}
               viewport={{ once: true }}
             >
-              <AppImage src={e.img} />
+              <AppImage src={e.img} alt={e.name}/>
             </motion.div>
           </SwiperSlide>
         ))}
