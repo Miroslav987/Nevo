@@ -11,13 +11,15 @@ import styles from './AppImage.module.scss'
 
 interface AppImageProps {
   src?: StaticImageData | string | null
+  alt?:string
+  
 }
 
-const AppImage: FC<AppImageProps & Omit<ImageProps, 'src'>> = ({ src, preview = false, ...props }) => {
+const AppImage: FC<AppImageProps & Omit<ImageProps, 'src'>> = ({ src, alt = 'image', preview = false, ...props }) => {
   const normalizedSrc = typeof src === 'string' ? src : src?.src
 
   return (
-    <Image {...props} src={normalizedSrc} preview={preview} fallback={fallbackImage.src} className={styles.appImage} />
+    <Image {...props} src={normalizedSrc} preview={preview} fallback={fallbackImage.src} className={styles.appImage} alt={alt} />
   )
 }
 

@@ -27,7 +27,7 @@ const NavButton = ({ item, isMob, isActive, handleNav }: NavButtonProps) => {
       onClick={() => handleNav(item.path)}
       className={`${styles.navButton} ${isActive === item.path && !isMob && styles.active}`}
     >
-      <Image src={item.icon} alt={item.title} priority /> <Text>{item.title}</Text>
+      <Image src={item.icon} alt="" aria-hidden="true" priority /> <Text>{item.title}</Text>
     </AppButton>
   )
 }
