@@ -27,7 +27,10 @@ export async function POST(request: NextRequest) {
   console.log('=== SHEETS API CALLED ===');
   
   try {
+<<<<<<< HEAD
 
+=======
+>>>>>>> dff957e (fix: ContactForm)
     if (!SPREADSHEET_ID) {
       console.error('MISSING GOOGLE_SHEET_ID');
       return NextResponse.json(
@@ -62,7 +65,7 @@ export async function POST(request: NextRequest) {
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: SPREADSHEET_ID,
-      range: 'Лист1!A:E', // 5 колонок
+      range: 'Лист1!A:E', 
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [[
@@ -89,6 +92,10 @@ export async function POST(request: NextRequest) {
     console.error('Error code:', error.code);
     console.error('Error details:', error.errors || error.response?.data);
     
+<<<<<<< HEAD
+=======
+
+>>>>>>> dff957e (fix: ContactForm)
     let errorMessage = 'Failed to save data';
     if (error.code === 404) {
       errorMessage = 'Spreadsheet not found. Check the Sheet ID and sharing settings.';
