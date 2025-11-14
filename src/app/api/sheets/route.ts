@@ -66,7 +66,7 @@ export async function POST(request: NextRequest) {
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [[
-          new Date().toLocaleString('ru-RU'),
+          new Date().toLocaleString('ru-RU', { timeZone: 'Asia/Bishkek' }),,
           name,
           bot || 'Не выбран',
           phone || '',

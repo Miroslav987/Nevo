@@ -1,12 +1,13 @@
 import React from 'react'
 
 import { Typography } from 'antd'
+import Image from 'next/image'
+
 import { ItemNav } from '@entities/header/model/nav.mock'
 
 import AppButton from '@shared/ui/AppButton'
 
 import styles from './NavButton.module.scss'
-import Icon from '@shared/ui/Icon/Icon'
 
 // import { usePathname } from 'next/navigation';
 const { Text } = Typography
@@ -26,7 +27,7 @@ const NavButton = ({ item, isMob, isActive, handleNav }: NavButtonProps) => {
       onClick={() => handleNav(item.path)}
       className={`${styles.navButton} ${isActive === item.path && !isMob && styles.active}`}
     >
-      <Icon name={item.icon} priority/><Text>{item.title}</Text>
+      <Image src={item.icon} alt="" aria-hidden="true" priority /> <Text>{item.title}</Text>
     </AppButton>
   )
 }

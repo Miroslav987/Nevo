@@ -24,13 +24,10 @@ export default function ContactForm({ bot }: ContactFormType) {
   const [form] = Form.useForm()
   const {closeModal} = useModal()
   const [loading, setLoading] = useState(false)
-  useEffect(() => {
-    console.log(form)
-  }, [form])
+
 
   const onFinish = async (values: FormData) => {
     setLoading(true)
-    console.log(values)
 
     try {
       const response = await fetch('/api/sheets', {
