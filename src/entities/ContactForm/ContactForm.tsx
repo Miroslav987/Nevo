@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import { MessageOutlined, UserOutlined } from '@ant-design/icons'
 import { Button, Card, Form, Input, Typography, message as antMessage } from 'antd'
