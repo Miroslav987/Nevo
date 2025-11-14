@@ -65,7 +65,7 @@ export default function ContactForm({ bot }: ContactFormType) {
         </Title>
       }
     >
-      
+
       <Form
         form={form}
         name="contact-form"
