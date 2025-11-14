@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
   console.log('=== SHEETS API CALLED ===');
   
   try {
-    // Проверяем наличие обязательных переменных
+
     if (!SPREADSHEET_ID) {
       console.error('MISSING GOOGLE_SHEET_ID');
       return NextResponse.json(
@@ -59,14 +59,14 @@ export async function POST(request: NextRequest) {
 
     console.log('Attempting to append to sheet:', SPREADSHEET_ID);
 
-    // Пробуем добавить данные
+
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: SPREADSHEET_ID,
       range: 'Лист1!A:E', // 5 колонок
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [[
-          new Date().toLocaleString('ru-RU', { timeZone: 'Asia/Bishkek' }),,
+          new Date().toLocaleString('ru-RU', { timeZone: 'Asia/Bishkek' }),
           name,
           bot || 'Не выбран',
           phone || '',
@@ -89,7 +89,6 @@ export async function POST(request: NextRequest) {
     console.error('Error code:', error.code);
     console.error('Error details:', error.errors || error.response?.data);
     
-    // Более детальная информация об ошибке
     let errorMessage = 'Failed to save data';
     if (error.code === 404) {
       errorMessage = 'Spreadsheet not found. Check the Sheet ID and sharing settings.';
