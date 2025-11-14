@@ -7,8 +7,7 @@ import 'swiper/css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import type { Swiper as SwiperType } from 'swiper/types'
 
-import arrow from '@shared/icons/arrow.svg'
-import AppButton from '@shared/ui/Button'
+import AppButton from '@shared/ui/AppButton'
 import AppImage from '@shared/ui/Image'
 import { Text } from '@shared/ui/Text'
 
@@ -16,6 +15,7 @@ import { ourTeam } from '../../model/ourTeam.mock'
 import { settingOurTeamSwiper } from '../../model/settingOurTeamSwiper'
 
 import styles from './OurTeamSwiper.module.scss'
+import Icon from '@shared/ui/Icon/Icon'
 
 const OurTeamSwiper = () => {
   const [imageSwiper, setImageSwiper] = useState<SwiperType | null>(null)
@@ -54,7 +54,7 @@ const OurTeamSwiper = () => {
               transition={{ duration: 1 }}
               viewport={{ once: true }}
             >
-              <AppImage src={e.img} alt={e.name}/>
+              <AppImage name={e.img} alt={e.name}/>
             </motion.div>
           </SwiperSlide>
         ))}
@@ -81,10 +81,10 @@ const OurTeamSwiper = () => {
         </Swiper>
         <div className={styles.navigation}>
           <AppButton onClick={handlePrev} className={styles.navButton}>
-            <AppImage src={arrow} />
+            <Icon name='arrow' />
           </AppButton>
           <AppButton onClick={handleNext} className={styles.navButton}>
-            <AppImage src={arrow} />
+            <Icon name='arrow' />
           </AppButton>
         </div>
       </div>

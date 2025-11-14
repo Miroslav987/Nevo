@@ -1,11 +1,9 @@
 'use client'
 
-import Image from 'next/image'
-
 import { useDrawerStore } from '@entities/header/model/useDrawerStore'
 
-import burgerMenu from '@shared/icons/burger_menu.svg'
-import AppButton from '@shared/ui/Button'
+import AppButton from '@shared/ui/AppButton'
+import Icon from '@shared/ui/Icon/Icon'
 
 import styles from './BurgerButton.module.scss'
 
@@ -14,7 +12,7 @@ export const BurgerButton = () => {
 
   return (
     <AppButton onClick={toggleDrawer} className={styles.burgerBtn}>
-      <Image src={burgerMenu} alt="Открыть меню" />
+      <Icon name="burger_menu" />
     </AppButton>
   )
 }

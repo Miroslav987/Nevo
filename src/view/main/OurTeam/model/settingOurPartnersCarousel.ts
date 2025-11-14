@@ -1,7 +1,7 @@
 import { Autoplay } from 'swiper/modules'
 
 export const settingOurPartnersCarousel = {
-  spaceBetween: 50,
+  spaceBetween: 100,
   slidesPerView: 5,
   allowTouchMove: false,
   loop: true,
@@ -14,6 +14,7 @@ export const settingOurPartnersCarousel = {
   breakpoints: {
     320: {
       slidesPerView: 3,
+      spaceBetween: 50,
     },
     576: {
       slidesPerView: 5,

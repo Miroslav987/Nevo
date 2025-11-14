@@ -1,20 +1,18 @@
-import { StaticImageData } from 'next/image'
 
-import elite_laptop from '@shared/imgs/laptop_elite_two.webp'
 
 export interface CardProject {
-  main_img: StaticImageData | null
-  img_one: StaticImageData | null
-  img_two: StaticImageData | null
+  main_img: string 
+  img_one: string 
+  img_two: string
   title: string
   description: string[]
 }
 
 export const listOurProject: CardProject[] = [
   {
-    main_img: elite_laptop,
-    img_one: elite_laptop,
-    img_two: null,
+    main_img: 'laptop_elite_two',
+    img_one: 'laptop_elite_two',
+    img_two: '',
     title: 'Elite Academy',
     description: [
       'Мы помогаем трансформировать систему планирования, организационные процессы, инфраструктуру, а также коммуникационные и материальные ресурсы.',
@@ -22,9 +20,9 @@ export const listOurProject: CardProject[] = [
     ],
   },
   {
-    main_img: null,
-    img_one: null,
-    img_two: null,
+    main_img: '',
+    img_one: '',
+    img_two: '',
     title: 'Elite Academy',
     description: [
       'Мы помогаем трансформировать систему планирования, организационные процессы, инфраструктуру, а также коммуникационные и материальные ресурсы.',
@@ -32,9 +30,9 @@ export const listOurProject: CardProject[] = [
     ],
   },
   {
-    main_img: null,
-    img_one: null,
-    img_two: null,
+    main_img: '',
+    img_one: '',
+    img_two: '',
     title: 'Elite Academy',
     description: [
       'Мы помогаем трансформировать систему планирования, организационные процессы, инфраструктуру, а также коммуникационные и материальные ресурсы.',

@@ -25,12 +25,12 @@ const CardProject = ({ card }: CardProjectProps) => {
       className={styles.cardProject}
     >
       <div className={styles.mainImg}>
-        <AppImage src={card.main_img} />
+        <AppImage name={card.main_img} />
       </div>
       <div className={styles.info}>
         <div className={styles.infoImages}>
-          <AppImage src={card.img_one} />
-          <AppImage src={card.img_two} />
+          <AppImage name={card.img_one} />
+          <AppImage name={card.img_two} />
         </div>
         <div className={styles.infoText}>
           <Text className={styles.title}>{card.title}</Text>

@@ -1,0 +1,58 @@
+.aboutBlock {
+    margin: auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        text-align: center;
+        font-size: 4.5rem;
+    }
+
+    .text {
+        display: flex;
+        align-items: center;
+        color: #676767;
+        margin-top: 24px;
+        font-size: 1.125rem;
+
+        &::before {
+            content: "";
+            margin-right: 16px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #10D07F;
+            outline: 3px solid #10D07F33;
+        }
+    }
+
+    .btns {
+        height: 64px;
+        display: flex;
+        gap: 15px;
+        margin-top: 60px;
+        .ourServices {
+            width: 270px;
+            background: #F4F4F4;
+            border: 1px solid #E9E9E9;
+            &:hover {
+            background: #F4F4F4;
+            border: 1px solid #E9E9E9;
+            }
+        }
+    }
+
+    .aboutImg {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+        margin-top: 120px;
+        img {
+            // width: 100%;
+            // height: 760px;
+            object-fit: cover;
+        }
+    }
+}

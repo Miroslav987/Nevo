@@ -2,52 +2,24 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "@app/*": [
-        "app/*"
-      ],
-      "@app": [
-        "app"
-      ],
-      "@pages/*": [
-        "pages/*"
-      ],
-      "@pages": [
-        "pages"
-      ],
-      "@widgets/*": [
-        "widgets/*"
-      ],
-      "@widgets": [
-        "widgets"
-      ],
-      "@features/*": [
-        "features/*"
-      ],
-      "@features": [
-        "features"
-      ],
-      "@entities/*": [
-        "entities/*"
-      ],
-      "@entities": [
-        "entities"
-      ],
-      "@shared/*": [
-        "shared/*"
-      ],
-      "@shared": [
-        "shared"
-      ]
+      "@app/*": ["app/*"],
+      "@app": ["app"],
+      "@pages/*": ["pages/*"],
+      "@pages": ["pages"],
+      "@widgets/*": ["widgets/*"],
+      "@widgets": ["widgets"],
+      "@features/*": ["features/*"],
+      "@features": ["features"],
+      "@entities/*": ["entities/*"],
+      "@entities": ["entities"],
+      "@shared/*": ["shared/*"],
+      "@shared": ["shared"]
     },
     "target": "ESNext",
     "useDefineForClassFields": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -67,14 +39,16 @@
       }
     ]
   },
-  "include": [
-    "**/*.ts",
-    "./src/**/*",
-    ".next/types/**/*.ts"
-  ],
+  "include": ["src/**/*", ".next/types/**/*.ts"], 
   "exclude": [
     "node_modules",
     "dist",
-    "vite.config.ts"
+    ".bun",
+    ".next",
+    "out",
+    "public",
+    "vite.config.ts",
+    "**/*.spec.ts",
+    "**/*.test.ts"
   ]
 }

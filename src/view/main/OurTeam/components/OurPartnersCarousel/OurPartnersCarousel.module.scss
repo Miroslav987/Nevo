@@ -12,10 +12,16 @@
 
     :global(.swiper-wrapper) {
       transition-timing-function: linear !important;
+
     }
+    // :global(.ant-image-img ) {
+    //   height: 76px !important;
+    // }
+
   }
 
   .shadows {
+
     &::before,
     &::after {
       content: '';

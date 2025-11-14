@@ -15,7 +15,7 @@ const OurPartnersCarousel = () => {
       <Swiper {...settingOurPartnersCarousel} className={styles.swiperPartners}>
         {ourPartners.map((e, i) => (
           <SwiperSlide key={i} className={styles.partners}>
-            <AppImage src={e} />
+            <AppImage name={e} />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -1,28 +1,25 @@
-import { StaticImageData } from 'next/image'
 
-import aboutProject from '@shared/icons/about_project.svg'
-import aboutUs from '@shared/icons/about_us.svg'
-import main from '@shared/icons/main.svg'
+
 
 export interface ItemNav {
-  icon: StaticImageData
+  icon: string
   path: string
   title: string
 }
 
 export const itemNav: ItemNav[] = [
   {
-    icon: main,
+    icon: 'main',
     path: '/',
     title: 'Главная',
   },
   {
-    icon: aboutUs,
+    icon: 'about_us',
     path: '/about/us',
     title: 'О нас',
   },
   {
-    icon: aboutProject,
+    icon:  'about_us',
     path: '/about/project',
     title: 'Наши проекты',
   },

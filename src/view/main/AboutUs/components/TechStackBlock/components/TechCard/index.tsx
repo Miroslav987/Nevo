@@ -5,10 +5,10 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { TechCard as TechCardMock } from 'view/main/AboutUs/model/adoutUs.mock'
 
-import AppImage from '@shared/ui/Image'
 import { Text } from '@shared/ui/Text'
 
 import styles from './TechCard.module.scss'
+import Icon from '@shared/ui/Icon/Icon'
 
 type TechCardProps = {
   card: TechCardMock
@@ -27,7 +27,7 @@ const TechCard = ({ card, index }: TechCardProps) => {
       >
         <Text>{card.title}</Text>
         <div className={styles.icon}>
-          <AppImage src={card.img} />
+          <Icon name={card.icon} />
         </div>
       </motion.div>
     </div>

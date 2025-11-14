@@ -1,0 +1,14 @@
+.listTariffs {
+        max-height: 752px;
+        display: flex;
+        gap: 15px;
+        margin-top: 80px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 34px;
+
+        @media (max-width: 1000px) {
+                max-height: max-content;
+                flex-direction: column;
+        }
+}

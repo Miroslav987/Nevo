@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Footer from '@widgets/Footer/ui'
 import Header from '@widgets/Header/ui'
 
+import ModalProvider from '@shared/context/ModalProvider'
 import '@shared/styles/global.scss'
 
 export const metadata: Metadata = {
@@ -19,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <ModalProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </ModalProvider>
       </body>
     </html>
   )

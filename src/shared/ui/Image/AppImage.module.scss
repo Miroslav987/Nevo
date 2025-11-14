@@ -1,6 +1,6 @@
 .appImage {
   :global(.ant-image-error) img {
-    max-height: 400px;
+    max-height: 400px !important;
   }
 
   :global(.ant-image) img {

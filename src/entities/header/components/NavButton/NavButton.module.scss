@@ -33,7 +33,7 @@
     background: var(--color-text-primary);
 
     img {
-      filter: var(--color-white-fill);
+      filter: var(--filter-white);
     }
 
     span {
@@ -62,7 +62,7 @@
   }
 
   img {
-    filter: var(--color-white-fill);
+    filter: var(--filter-white);
   }
 
   &:hover {

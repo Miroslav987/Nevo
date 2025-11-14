@@ -1,0 +1,36 @@
+.cardFAQ {
+    width: 49%;
+
+    .plus {
+        font-family: math;
+        font-size: 18px !important;
+    }
+
+    :global(.ant-collapse-header) {
+        padding: 40px !important;
+
+        border-radius: 24px !important;
+        display: flex;
+        align-items: center !important;
+        justify-content: center;
+        flex-direction: row-reverse;
+        height: 100px;
+        background-color: var(--color-background-primary);
+        :global(.ant-collapse-header-text) {
+            font-size: 16px ;
+        }
+
+    }
+
+    :global(.ant-collapse-content) {
+        padding: 0 20px;
+        border: none;
+        background: none;
+
+    }
+    :global(.ant-collapse) {
+    
+        background-color: var(--color-background-primary) !important;
+        border-radius: 24px !important;
+    }
+}

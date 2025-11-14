@@ -2,7 +2,7 @@ import React from 'react'
 
 import Image from 'next/image'
 
-import logo from '@shared/icons/logo.svg'
+import logo from '@shared/icons/logo.svg?url'
 
 import styles from './AppLogo.module.scss'
 

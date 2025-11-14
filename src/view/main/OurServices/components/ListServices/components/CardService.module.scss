@@ -1,0 +1,57 @@
+.cardService {
+  position: relative;
+  width: 49%;
+  height: 560px;
+  border-radius: 16px;
+  border: 1px solid var(--color-text-secondary);
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg); // задаём через inline-style или CSS-переменную
+    background-size: cover; // ведёт себя как cover
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1);
+    transition: transform 1s ease;
+    z-index: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(33.23deg, #1B1B1B 15%, rgba(27,27,27,0) 80%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    transform: scale(1.1);
+  }
+
+
+    .infoText {
+        width: 50%;
+        position: absolute;
+        z-index: 2;
+        left: 32px;
+        bottom: 40px;
+        h2 ,p {
+            text-align: start;
+        color: var(--color-text-white);
+
+        }
+        h2 {
+            font-size: 24px;
+        }
+        p {
+            padding-top: 12px;
+            font-size: 14px;
+            line-height: 132%;
+        }
+    }
+}

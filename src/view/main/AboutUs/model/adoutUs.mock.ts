@@ -1,8 +1,3 @@
-import { StaticImageData } from 'next/image'
-
-import corporate from '@shared/icons/corporate.svg'
-import landing from '@shared/icons/landing.svg'
-import store from '@shared/icons/store.svg'
 
 interface AboutUs {
   content_title: string
@@ -29,7 +24,7 @@ interface AboutUs {
 
 export interface TechCard {
   title: string
-  img: StaticImageData
+  icon: string
 }
 
 export const aboutUs: AboutUs = {
@@ -60,15 +55,15 @@ export const aboutUs: AboutUs = {
   techCards: [
     {
       title: 'Одностроничные сайты',
-      img: landing,
+      icon: 'landing',
     },
     {
       title: 'Интернет Магазины',
-      img: store,
+      icon: 'store',
     },
     {
       title: 'Корпоративные сайты',
-      img: corporate,
+      icon: 'corporate',
     },
   ],
 }

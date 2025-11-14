@@ -1,0 +1,41 @@
+.missionBlock {
+    margin: auto;
+    margin-top: 240px;
+    margin-bottom: 120px;
+    max-width: 800px;
+
+    .sparkWrapper {
+        width: 68px;
+        height: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        background: #C42B22;
+    }
+
+    .info {
+        max-width: 720px;
+        margin-top: 32px;
+        margin-bottom: 40px;
+
+        .text {
+            line-height: 140%;
+            font-size: 30px;
+            color: #6D727D;
+        }
+    }
+
+    .ourServiceBtn {
+        width: 178px;
+        height: 64px;
+        background: #F4F4F4;
+        border: 1px solid #E9E9E9;
+
+        &:hover {
+            background: #F4F4F4 !important;
+            border: 1px solid #E9E9E9 !important;
+        }
+
+    }
+}

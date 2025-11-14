@@ -1,6 +1,6 @@
 import React from 'react'
 
-import AppButton from '@shared/ui/Button'
+import AppButton from '@shared/ui/AppButton'
 
 import styles from './CTAButton.module.scss'
 

@@ -1,0 +1,15 @@
+.bookCallButton {
+    width: 270px;
+    height: 64px;
+    background: #020106;
+    box-shadow:  var(--shadow);
+    span {
+        color: var(--color-text-white);
+        
+    }
+    &:hover {
+      color: inherit !important;
+      background: #020106 !important;
+    }
+}
+

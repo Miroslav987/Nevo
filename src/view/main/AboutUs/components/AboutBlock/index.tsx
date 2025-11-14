@@ -4,13 +4,12 @@ import React from 'react'
 
 import { motion } from 'framer-motion'
 
-import cube from '@shared/icons/cube.svg'
-import AppImage from '@shared/ui/Image'
 import { Text } from '@shared/ui/Text'
 
 import { aboutUs } from '../../model/adoutUs.mock'
 
 import styles from './AboutBlock.module.scss'
+import Icon from '@shared/ui/Icon/Icon'
 
 const AboutBlock = () => {
   return (
@@ -34,7 +33,7 @@ const AboutBlock = () => {
           viewport={{ once: true }}
         >
           <div className={styles.cubeIcon}>
-            <AppImage src={cube} />
+            <Icon name='cube'/>
           </div>
           <Text className={styles.subTitle}>{aboutUs.sub_title}</Text>
         </motion.div>
